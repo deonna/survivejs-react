@@ -7,7 +7,7 @@ export default ({editing, value, onEdit, ...props}) => {
     return <Edit value={value} onEdit={onEdit} {...props} />
   }
 
-  return <span {...props}value: {value}</span></span>
+  return <span {...props}>value: {value}</span>
 }
 
 const Edit = ({onEdit = () => {}, value, ...props}) => (
