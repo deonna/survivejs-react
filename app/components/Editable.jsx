@@ -2,13 +2,15 @@
 
 import React from 'react'
 
-export default ({editing, value, ...props}) => {
+const Editable = ({editing, value, ...props}) => {
   if(editing) {
-    return <Edit value={value} {...props} />
+    return <Editable.Edit value={value} {...props} />
   }
 
-  return <span>{value}</span>
+  return <Editable.Value value={value} />
 }
+
+Editable.Value = ({value, ...props}) => <span {...props}>{value}</span>
 
 class Edit extends React.Component {
   render() {
@@ -36,3 +38,7 @@ class Edit extends React.Component {
     }
   }
 }
+
+Editable.Edit = Edit
+
+export default Editable
