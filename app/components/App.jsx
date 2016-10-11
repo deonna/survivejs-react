@@ -78,9 +78,9 @@ export default class App extends React.Component {
         if(note.id === id) {
           note.editing = false
           note.task = task
-
-          return note
         }
+
+        return note
       })
     })
   }
